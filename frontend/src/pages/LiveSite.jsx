@@ -9,7 +9,7 @@ const LiveSite = () => {
     useEffect(()=>{
           const handleGetWebsite = async()=>{
             try {
-                const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/website/getbyslug/${id}`,{withCredentials:true})        
+                const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/website/getbyslug/${id}`)        
                 setHtml(res.data.latestCode)          
             } catch (error) {
                 console.log(error)
